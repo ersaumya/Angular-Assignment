@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Question Details</h1>
+	<div class="card" *ngIf="questionDetailId">
+		<div class="card-body">
+			<h4 class="card-title">{{questionDetailId.questionText}}</h4>
+			<p class="card-text row"><span class="col-6">A {{questionDetailId.answerOptions['A']}}</span><span class="col-6"> B {{questionDetailId.answerOptions['B']}}</span></p>
+      	<p class="card-text row"><span class="col-6">C {{questionDetailId.answerOptions['C']}}</span><span class="col-6"> D {{questionDetailId.answerOptions['D']}}</span></p>
+		<p class="card-text">Author :- {{questionDetailId.author}}</p>
+    	<p class="card-text" class="row"><span class="col">Date :- {{questionDetailId.stats.askedDate}}</span><span class="col">Asked Count :- {{questionDetailId.stats.count}}</span><span class="col">Answer Correctly :- {{questionDetailId.stats.percent}}</span></p>
+		</div>
+	</div>
+</div>
+ 

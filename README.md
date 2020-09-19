@@ -1,27 +1,30 @@
-# AssignmentProject
+Develop a SPA for the below requirements using Angular 
+Submit the code back. If possible, share a demo link that can be tested
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
-## Development server
+Requirements :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Assume a JSON file with array of Questions with below fields
+    id
+    Question Text
+    Answer Options
+    Correct Answer
+    Author
+    Stats - Last Asked Date,Asked Count, percent of users who answered correctly
 
-## Code scaffolding
+Login Screen
+    Show simple form username/password & submit
+    Mock the Password Validation at clientside by using hardcoded array of users which can be
+    easily replaced with server API later on
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Search Screen
+    Shows a search box & submit button
+    Clicking on submit should search for given keyword in the questionText
+    Display the search result - show ID & questiontext
+    Clicking on one of the result should take to next screen
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Question screen
+    It should show the complete details of the selected question
+    If at all user refreshes the browser while at this screen, it should show the same details
+    Ensure if user tries to visit any of the inner screen without login, he should be redirected to
+    login screen & then taken to the requested screen on successful login

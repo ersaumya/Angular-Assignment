@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row" style="margin-top:20px">
+    <div class="input-group col">
+        <input type="text" class="form-control" placeholder="Search"  aria-describedby="basic-addon2" [(ngModel)]="searchString" (keyup.enter)="searchQuestion()">
+        <div class="input-group-append">
+        <button class="btn btn-success" type="button" (click)="searchQuestion()" [disabled]="searchString.length===0">Search</button>
+        </div>
+    </div>
+  </div>
+
+    <table class="table" style="margin-top:30px">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Question text</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let result of searchResult" [routerLink]="['/details',result.id]" style="cursor:pointer">
+       <td>{{result.id}}</td>
+       <td>{{result.questionText}}</td>
+     </tr>
+    </tbody>
+    </table>
+</div>

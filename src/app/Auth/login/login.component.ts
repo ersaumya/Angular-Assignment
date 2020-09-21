@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
         this.form.controls.password.value === users[fetchIndex].password
       ) 
       {
-        this.router.navigate(['/search']);
+        this.router.navigate(['/question/search']);
         sessionStorage.setItem('userToken', 'ABCDEF12345');
       }
     } 

@@ -3,20 +3,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './Auth/login/login.component';
 import { SearchQuestionComponent } from './Question/search-question/search-question.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './Shared/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   {
-    path: 'search',
-    component: SearchQuestionComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'details/:id',
-    component: QuestionDetailsComponent,
-    canActivate: [AuthGuard]
+    path: 'question',
+    loadChildren: () =>import('./Question/question.module').then((m) => m.QuestionModule)
   },
 ];
 

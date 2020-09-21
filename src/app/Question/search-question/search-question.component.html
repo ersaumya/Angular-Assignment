@@ -16,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-     <tr *ngFor="let result of searchResult" [routerLink]="['/details',result.id]" style="cursor:pointer">
+     <tr *ngFor="let result of searchResult" [routerLink]="['/question/details',result.id]" style="cursor:pointer">
        <td>{{result.id}}</td>
        <td>{{result.questionText}}</td>
      </tr>
